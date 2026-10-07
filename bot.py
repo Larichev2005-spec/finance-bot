@@ -27,7 +27,7 @@ if os.path.exists(".env"):
             k, v = line.strip().split("=", 1)
             os.environ.setdefault(k, v)
 
-TOKEN = “8686798643:AAGtaC2vfjABAl0eaL5orfiRveEHC6vSa40”
+TOKEN = os.getenv("BOT_TOKEN", "")
 CUR = os.getenv("CURRENCY", "₽")
 DB = os.path.join(os.getenv("DATA_DIR", "."), "finance.db")
 
