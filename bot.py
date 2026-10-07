@@ -29,7 +29,8 @@ if os.path.exists(".env"):
 
 TOKEN = “8686798643:AAGtaC2vfjABAl0eaL5orfiRveEHC6vSa40”
 CUR = os.getenv("CURRENCY", "₽")
-DB = "finance.db"
+DB = os.path.join(os.getenv("DATA_DIR", "."), "finance.db")
+
 
 # Цвета таблицы Excel: тёмно-синий, белый, чёрный
 NAVY, WHITE, BLACK, LIGHT = "0B1F4B", "FFFFFF", "000000", "EEF1F7"
